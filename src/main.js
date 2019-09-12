@@ -10,6 +10,7 @@ import 'element-ui/lib/theme-chalk/index.css';
 import { sync } from 'vuex-router-sync';
 
 import '@/style/index';
+import '@/icons';
 
 import '@/permission';
 

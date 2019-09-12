@@ -14,7 +14,7 @@
       </div>
       <el-form-item prop="username">
         <span class="svg-container svg-container_login">
-          <!-- <icon-svg icon-class="user" /> -->
+          <icon-svg icon-class="admin" />
         </span>
         <el-input
           name="username"
@@ -27,7 +27,7 @@
 
       <el-form-item prop="password">
         <span class="svg-container">
-          <!-- <icon-svg icon-class="password" /> -->
+          <icon-svg icon-class="password" />
         </span>
         <el-input
           name="password"
@@ -38,7 +38,7 @@
           placeholder="密码"
         />
         <span class="show-pwd" @click="showPwd">
-          <!-- <icon-svg icon-class="eye" /> -->
+          <icon-svg icon-class="eye" />
         </span>
       </el-form-item>
 
@@ -181,6 +181,57 @@ export default {
   },
 };
 </script>
+
+<style lang="stylus">
+$bg = #2d3a4b;
+$light_gray = #eee;
+
+/* reset element-ui css */
+.login-container {
+  .el-input {
+    display: inline-block;
+    height: 48px;
+    width: 85%;
+    input {
+      background: transparent;
+      border: 0px;
+      -webkit-appearance: none;
+      border-radius: 0px;
+      padding: 12px 5px 12px 15px;
+      // color: $light_gray;
+      color: rgba(0, 0, 0, 0.65);
+      color: #555555;
+      font-size: 16px;
+      height: 48px;
+
+      &:focus {
+        // border: #40a9ff;
+      }
+
+      &:-webkit-autofill {
+        // background: #fff;
+        -webkit-box-shadow: 0 0 0px 1000px #fff inset !important;
+        // -webkit-text-fill-color: #fff !important;
+        // -webkit-box-shadow: none !important;
+        // -webkit-text-fill-color: #fff !important;
+      }
+    }
+  }
+  .el-form-item {
+    // border: 1px solid rgba(255, 255, 255, 0.1);
+    // background: rgba(0, 0, 0, 0.1);
+    // color: #454545;
+    margin-bottom: 24px;
+    border: 1px solid #d9d9d9;
+    border-radius: 5px;
+    color: rgba(0, 0, 0, 0.65);
+    color: #555555;
+  }
+  .el-form-item__content {
+    display: flex;
+  }
+}
+</style>
 
 <style lang="stylus" scoped>
 @import '~@/style/var';
