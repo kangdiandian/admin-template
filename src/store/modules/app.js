@@ -1,4 +1,5 @@
 import cookie from '@/utils/cookie';
+import api from '@/api';
 
 const app = {
   state: {
@@ -24,6 +25,10 @@ const app = {
     // 切换silderBar
     toggleSideBar({ commit }) {
       commit('TOGGLE_SILDBAR');
+    },
+
+    initConfig({ commit }) {
+      api.initConfig({}, res => {}, err => {});
     },
   },
 };

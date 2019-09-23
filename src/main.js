@@ -11,12 +11,18 @@ import { sync } from 'vuex-router-sync';
 
 import '@/style/index';
 import '@/icons';
+import api from '@/api';
+
+// mock 数据，上线需注释
+import '@/mock';
 
 import '@/permission';
 
 Vue.use(Element, {
   size: 'medium',
 });
+
+Vue.prototype['$api'] = api;
 
 Vue.config.productionTip = false;
 
